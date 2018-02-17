@@ -33,7 +33,8 @@ public class Code {
         StringBuilder result = new StringBuilder(allowedSymbols.length());
         SecureRandom secureRandom = new SecureRandom();
         for (int i=0; i < codeLenght; i++) {
-            int randomSymbolNum = Math.abs(secureRandom.nextInt()) % allowedSymbols.length();
+            //int randomSymbolNum = Math.abs(secureRandom.nextInt()) % allowedSymbols.length();
+            int randomSymbolNum = secureRandom.nextInt(allowedSymbols.length());
             char randomChar = allowedSymbols.charAt(randomSymbolNum);
             result.append(randomChar);
         }
