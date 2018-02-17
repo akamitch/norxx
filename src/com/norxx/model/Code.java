@@ -24,7 +24,7 @@ public class Code {
     }
 
     private static Code getFromBase(String codeString){
-        return new Code(codeString, 999.11f);
+        return new Code(codeString, 999.12f);
         //Todo сделать выгрузку кода из базы и ексепшен если нету такого кода
     }
 
