@@ -6,7 +6,7 @@ import java.security.SecureRandom;
 public class Code {
     private String codeString;
     private float amount;
-    public static final int codeLenght = 36;
+    public static final int codeLenght = 5;
     enum status {
             valid, invalid
     }
@@ -32,7 +32,7 @@ public class Code {
         String allowedSymbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
         StringBuilder result = new StringBuilder(allowedSymbols.length());
         SecureRandom secureRandom = new SecureRandom();
-        for (int i=1; i != codeLenght; i++) {
+        for (int i=0; i < codeLenght; i++) {
             int randomSymbolNum = Math.abs(secureRandom.nextInt()) % allowedSymbols.length();
             char randomChar = allowedSymbols.charAt(randomSymbolNum);
             result.append(randomChar);
